@@ -1,0 +1,97 @@
+@keyframes reactive {
+    0% {
+        background-color: #FAF3F3;
+        opacity:1;
+    }
+    22% {
+        background-color: #E1E5EA;
+    }
+    77% {
+        background-color: #A7BBC7;
+    }
+    100% {
+        background-color: #FAF3F3;
+    }
+}
+
+body {
+  max-width: 1440px;
+  padding: 10%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 80px;
+}
+
+button {
+  pointer-events: auto;
+  cursor: pointer;
+  background: #e7e7e7;
+  border: none;
+  padding: 1.5rem 3rem;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: gray;
+}
+
+button:hover::after {
+    transform: translate3d(0,0,0);
+    transition: transform 0.01s 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.children-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-container {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-self: center;
+  width: 100%;
+}
+
+
+.children-container .children {
+  border: solid 1px;
+  border-radius: 5%;
+  width: 30%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.children-container .children > p{
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.children-container .second-children {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 900;
+  border: solid 1px;
+  border-radius: 5%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+.children.reactive, .second-children.reactive {
+  animation: reactive 1200ms infinite ease-in-out;
+}

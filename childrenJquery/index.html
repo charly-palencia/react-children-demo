@@ -1,0 +1,40 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css"/>
+    <script type="text/javascript" async="" src="./index.js"></script>
+  </head>
+  <body>
+    <div class="App">
+      <h1>Children Compontents</h1>
+
+      <div class="button-container">
+        <button>Update</button>
+      </div>
+
+      <div class="children-container">
+      </div>
+
+
+      <!-- Children template -->
+      <div id="template-children" style="display: none;"/>
+        <div class="children" data-id="{{position}}">
+          <p> Counter {{incremental}} </p>
+          <button>Update</button>
+
+          <div class="second-children" >
+            <p>{{position}}</p>
+          </div>
+
+          <div class="second-children" >
+            <p>{{incremental}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
